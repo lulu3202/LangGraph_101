@@ -1,8 +1,7 @@
 # LangGraph_101 - Chatbot with LangGraph and LangChain
 
 ## Purpose
-
-This project demonstrates building a simple chatbot using Langgraph and LangChain libraries. It leverages the Gemma2-9b-It language model from Groq for generating responses and Langgraph for managing the chatbot's conversational flow.
+This project demonstrates building a simple chatbot using LangGraph and LangChain libraries. It leverages the Gemma2-9b-It language model from Groq for generating responses and LangGraph for managing the chatbot's conversational flow.
 
 ## Structure
 The code is structured into four main parts:
@@ -16,7 +15,7 @@ The code is structured into four main parts:
    - Imports `ChatGroq` from `langchain_groq`.
    - Initializes the language model `llm` with Groq API key and model name ("Gemma2-9b-It").
 
-3. **Chatbot State Management with Langgraph:**
+3. **Chatbot State Management with LangGraph:**
    - Defines a `State` class using `TypedDict` to manage the chatbot's conversational state, primarily storing messages.
    - Creates a `StateGraph` instance (`graph_builder`) to define the chatbot's flow.
    - Defines a `chatbot` function that updates the state by invoking the language model with the current messages and returning the response.
@@ -30,10 +29,9 @@ The code is structured into four main parts:
    - Processes the user input by streaming it through the graph, updating the state, and printing the assistant's response.
 
 ## How it Works
-
 - The chatbot takes user input and sends it to the Gemma2-9b-It language model via Groq.
 - The language model generates a response based on the input and conversation history.
-- Langgraph manages the conversational state and flow, ensuring the chatbot maintains context.
+- LangGraph manages the conversational state and flow, ensuring the chatbot maintains context.
 - The chatbot continues to interact with the user until they type "quit" or "q".
 
 ## Dependencies
